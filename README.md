@@ -1,5 +1,5 @@
 ## Johnson Counter ##
-#### Introduction ####
+## Introduction ##
 Ring counter is like a shift counter where the output of the last flip-flop is connected to the input of the first flip-flop.
 With a certain type of connections and changing ORI(over ride inputs), clock pulse forms a ring like structure. Thus the
 name ”Ring counter”. Johnson’s counter is a modified ring counter. In this counter,
@@ -12,7 +12,7 @@ same as the number of states. This is an advantage for the Johnson’s counter. 
   <img  src="/images/1.png">
 </p>
 
-#### Working ####
+## Working ##
 The clock and ORI is connected to all the flip-flops, it is a synchronous counter. Here the ORI is connected to
 Clear(CLR) to all the flip-flops where as in ring counter PR of first flip-flop will be connected. When PR is 0 output is 1
 and when CLR is 0 output is 0.
@@ -29,14 +29,14 @@ states for the number of flip-flopes used.
 <p align="center">
   <img  src="/images/3.png">
 </p>
-#### Applications of Johnson counter ####
+## Applications of Johnson counter ##
 1. Johnson counter is used as a synchronous decade counter or divider circuit.
 2. It is used in hardware logic design to create complicated Finite states machine. ex: ASIC and FPGA design.
 3. The 3 stage Johnson counter is used as a 3 phase square wave generator which produces 1200 phase shift.
 4. It is used to divide the frequency of the clock signal by varying their feedback.
 5. A stepper motor controller.
 
-#### Block Diagram of Johnson Counter ####
+## Block Diagram of Johnson Counter ##
 
 <p align="center">
   <img  src="/images/5.png">
@@ -48,10 +48,10 @@ Icarus Verilog is a Verilog simulation and synthesis tool. It operates as a comp
 #### 2.About gtkwave ####
 GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing.
 #### 3. Installing iverilog and gtkwave ####
-For Ubuntu
-  $ sudo apt-get install git
-  $ sudo apt-get install iverilog 
-  $ sudo apt-get install gtkwave
+     $ sudo apt-get install git 
+     $ sudo apt-get install iverilog 
+     $ sudo apt-get install gtkwave
+ 
 #### 4. Executing the project ####
      $   git clone https://github.com/vamsidhar32/SISO_shift-Register
      $   cd SISO_shift-register
@@ -62,16 +62,55 @@ For Ubuntu
  About Yosys
            Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for           various application domains.
            
-  to synthesize
-  $   yosys
-  $   yosys>    script yosys_run.sh
+    to synthesize
+    $   yosys
+    $   yosys>    script yosys_run.sh
   
   
-  o see different types of cells after synthesys
-    $   yosys>    stat
-  to generate schematics
-  $   yosys>    show
+    o see different types of cells after synthesys
+      $   yosys>    stat
+    to generate schematics
+    $   yosys>    show
  
  
  ## Functional Characteristics ##
+    Simulation results of Shift register.
+    We can observe the shifting of serial input data.
+    Test bench is given according to the graph.
+    
+    
+    <p align="center">
+  <img  src="/images/4.png">
+  </p>
+    
+ ## Contributors ##
+ Vishal Cheeti
+ 
+ Kunal Gosh
+    
+    
+ ## Acknowledgements ##
+ Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+ 
+ Madhav Rao, Associate Professor, IIIT Bangalore
+ 
+ 
+ ## Contact Information ##
+ Vishal Cheeti, imtech2020 Student, International Institute of Information Technology, Bangalore , Vishal.Cheeti@iiitb.ac.in
+ 
+ Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
+ 
+ ## References ##
+ 
+ https://verilogcodes.blogspot.com/2015/10/verilog-code-for-4-bit-johnson-counter.html
+ 
+ https://www.elprocus.com/what-is-johnson-counter-circuit-diagram-truth-table-its-applications/
+ 
+ https://www.javatpoint.com/johnson-counter-in-digital-electronics
+ 
+ https://www.electronics-tutorials.ws/sequential/seq_6.html
+ 
+ 
+   
+   
  
