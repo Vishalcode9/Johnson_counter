@@ -9,7 +9,7 @@ synchronous counter. For a 4 bit counter, 4 D flip-flops are used. In a Johnsonâ
 counter, the number of states is double the number of flip-flops used unlike a ring counter where number of flip-flops used is
 same as the number of states. This is an advantage for the Johnsonâ€™s counter.
 <p align="center">
-  <img  src="/images/p2.png">
+  <img  src="/images/1.png">
 </p>
 
 
