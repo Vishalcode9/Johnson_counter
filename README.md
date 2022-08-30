@@ -103,6 +103,18 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
     make
     sudo make install make test
     
+  Now you need to create a yosys_run.sh file , which is the yosys script file used to run the synthesis. The contents of the yosys_run file are given below:
+  
+  
+    read_liberty -lib lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    read_verilog iiitb_jc.v
+    synth -top iiitb_rv32i	
+    dfflibmap -liberty lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    abc -liberty lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    clean
+    flatten
+    write_verilog -noattr iiitb_jc_synth.v
+    
  ## Contributors ##
  Vishal Cheeti
  
