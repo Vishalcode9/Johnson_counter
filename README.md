@@ -115,6 +115,15 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
     flatten
     write_verilog -noattr iiitb_jc_synth.v
     
+  Now, in the terminal of your verilog files folder, run the following commands:
+  
+  
+    yosys
+    yosys -s yosys_run.sh
+    
+  
+  Now the synthesized netlist is written in "iiitb_jc_synth.v" file.
+    
  ## Contributors ##
  Vishal Cheeti
  
