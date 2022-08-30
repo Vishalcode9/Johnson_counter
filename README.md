@@ -82,6 +82,24 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
     <p align="center">
   <img  src="/images/presynth.jpeg">
   </p>
+  
+  ## SYNTHESIS ##
+  
+  #### Synthesis: ####
+  Synthesis transforms the simple RTL design into a gate-level netlist with all the constraints as specified by the designer. In simple language, Synthesis is a process that converts the abstract form of design to a properly implemented chip in terms of logic gates.
+  Synthesis takes place in multiple steps:
+
+  1)Converting RTL into simple logic gates.
+  2)Mapping those gates to actual technology-dependent logic gates available in the technology libraries.
+  3)Optimizing the mapped netlist keeping the constraints set by the designer intact.
+  
+  #### Yosys Synthesizer ####
+  It is a tool we use to convert out RTL design code to netlist. Yosys is the tool I've used in this project.
+  
+  The commands to get the yosys is given below:
+  git clone https://github.com/YosysHQ/yosys.git
+  make
+  sudo make install make test
     
  ## Contributors ##
  Vishal Cheeti
