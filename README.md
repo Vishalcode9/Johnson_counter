@@ -123,6 +123,26 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
     
   
   Now the synthesized netlist is written in "iiitb_jc_synth.v" file.
+  
+  #### GATE LEVEL SIMULATION(GLS) ####
+  
+  GLS is generating the simulation output by running test bench with netlist file generated from synthesis as design under test. Netlist is logically same as RTL code, therefore, same test bench can be used for it.We perform this to verify logical correctness of the design after synthesizing it. Also ensuring the timing of the design is met. Folllowing are the commands to run the GLS simulation:
+  
+  
+    iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd.v iiitb_jc_synth.v iiitb_jc_tb.v
+    ./a.out
+    gtkwave iiitb_jc.vcd
+    
+ 
+ The gtkwave output for the netlist should match the output waveform for the RTL design file. As netlist and design code have same set of inputs and outputs, we can use the same testbench and compare the waveforms.
+ 
+ <p align="center">
+  <img  src="/images/glsbigpic.jpeg">
+</p>
+
+
+ 
+ 
     
  ## Contributors ##
  Vishal Cheeti
