@@ -147,6 +147,12 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
 </p>
 
 
+The output waveform of the synthesized netlist are given below:
+ <p align="center">
+    <img  src="/images/postsynth.jpeg">
+</p>
+
+
  
  
     
