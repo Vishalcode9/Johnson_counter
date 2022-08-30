@@ -97,6 +97,8 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
   It is a tool we use to convert out RTL design code to netlist. Yosys is the tool I've used in this project.
   
   The commands to get the yosys is given below:
+  
+  
     git clone https://github.com/YosysHQ/yosys.git
     make
     sudo make install make test
