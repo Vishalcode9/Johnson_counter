@@ -310,7 +310,37 @@ Four timing parameters are used to characterize the inverter standard cell:
 
 Rise time: Time taken for the output to rise from 20% of max value to 80% of max value Rise time = (2.23843 - 2.17935) = 59.08ps Fall time- Time taken for the output to fall from 80% of max value to 20% of max value Fall time = (4.09291 - 4.05004) = 42.87ps Cell rise delay = time(50% output rise) - time(50% input fall) Cell rise delay = (2.20636 - 2.15) = 56.36ps Cell fall delay = time(50% output fall) - time(50% input rise) Cell fall delay = (4.07479 - 4.05) = 24.79ps
 
+## Layout ##
 
+The layout is generated using OpenLane. To run a custom design on openlane, Navigate to the openlane folder and run the following commands:
+
+$ cd designs
+
+$ mkdir iiitb_jc
+
+$ cd iiitb_jc
+
+$ mkdir src
+
+$ touch config.json
+
+$ cd src
+
+$ touch iiitb_jc.v
+
+The iiitb_jc.v file should contain the verilog RTL code you have used and got the post synthesis simulation for.
+
+Copy sky130_fd_sc_hd__fast.lib, sky130_fd_sc_hd__slow.lib, sky130_fd_sc_hd__typical.lib and sky130_vsdinv.lef files to src folder in your design.
+
+Results All the results are in run folder,synthesis,placement,floor,routing reports are present. The following codes for running are run_synthesis run_floor run_placement run_cts run_routing
+
+<p align="center">
+  <img  src="/images/placement.png">
+</p>
+
+<p align="center">
+  <img  src="/images/routing.png">
+</p>
  
     
  ## Contributors ##
