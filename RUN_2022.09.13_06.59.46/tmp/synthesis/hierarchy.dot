@@ -1,0 +1,26 @@
+digraph "iiitb_jc" {
+label="iiitb_jc";
+rankdir="LR";
+remincross=true;
+n4 [ shape=octagon, label="q", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="clk", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="reset", color="black", fontcolor="black" ];
+c9 [ shape=record, label="{{<p7> A}|$3\n$not|{<p8> Y}}" ];
+x0 [ shape=record, style=rounded, label="<s0> 7:7 - 0:0 " ];
+x0:e -> c9:p7:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", label=""];
+v1 [ label="0" ];
+c11 [ shape=record, label="{{<p7> A|<p10> B}|$2\n$eq|{<p8> Y}}" ];
+x3 [ shape=record, style=rounded, label="<s1> 6:0 - 7:1 |<s0> 0:0 - 0:0 " ];
+p2 [shape=box, style=rounded, label="PROC $1\n/openlane/designs/iiitb_jc/src/iiitb_jc.v:4.1-10.4"];
+c9:p8:e -> x3:s0:w [color="black", label=""];
+c11:p8:e -> p2:w [color="black", label=""];
+p2:e -> n4:w [color="black", style="setlinewidth(3)", label=""];
+n4:e -> p2:w [color="black", style="setlinewidth(3)", label=""];
+n4:e -> x0:s0:w [color="black", style="setlinewidth(3)", label=""];
+n4:e -> x3:s1:w [color="black", style="setlinewidth(3)", label=""];
+n5:e -> p2:w [color="black", label=""];
+n6:e -> c11:p7:w [color="black", label=""];
+n6:e -> p2:w [color="black", label=""];
+v1:e -> c11:p10:w [color="black", style="setlinewidth(3)", label=""];
+x3:e -> p2:w [color="black", style="setlinewidth(3)", label=""];
+}

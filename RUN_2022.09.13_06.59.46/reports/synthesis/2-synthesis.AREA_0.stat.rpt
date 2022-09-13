@@ -1,0 +1,18 @@
+
+24. Printing statistics.
+
+=== iiitb_jc ===
+
+   Number of wires:                  4
+   Number of wire bits:             11
+   Number of public wires:           3
+   Number of public wire bits:      10
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  9
+     sky130_fd_sc_hd__dfrtp_2        8
+     sky130_fd_sc_hd__inv_2          1
+
+   Chip area for module '\iiitb_jc': 213.955200
+

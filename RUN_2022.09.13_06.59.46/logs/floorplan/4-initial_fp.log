@@ -1,0 +1,25 @@
+OpenROAD 4a99e88667b0840531ca0096c4fa0da8f80d6cb1 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING STA-0163] /openlane/designs/iiitb_jc/src/sky130_fd_sc_hd__typical.lib line 23, default_fanout_load is 0.0.
+[INFO ODB-0222] Reading LEF file: /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef at line 930.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 442 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef
+[INFO]: Setting output delay to: 2.0
+[INFO]: Setting input delay to: 2.0
+[INFO]: Setting load to: 0.033442
+[INFO]: Setting clock uncertainity to: 0.25
+[INFO]: Setting clock transition to: 0.15
+[INFO]: Setting timing derate to: 0.5 %
+[INFO IFP-0001] Added 13 rows of 82 sites.
+[INFO IFP-0030] Inserted 0 tiecells using sky130_fd_sc_hd__conb_1/LO.
+[INFO IFP-0030] Inserted 0 tiecells using sky130_fd_sc_hd__conb_1/HI.
+[INFO] Extracting DIE_AREA and CORE_AREA from the floorplan
+[INFO] Floorplanned on a die area of 0.0 0.0 48.805 59.525 (microns). Saving to /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/reports/floorplan/4-initial_fp_die_area.rpt.
+[INFO] Floorplanned on a core area of 5.52 10.88 43.24 46.24 (microns). Saving to /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/reports/floorplan/4-initial_fp_core_area.rpt.

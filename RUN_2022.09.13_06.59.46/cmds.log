@@ -1,0 +1,102 @@
+Tue Sep 13 06:59:46 UTC 2022 - Executing "openroad -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/layers.list /home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef"
+
+Tue Sep 13 06:59:47 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef -i /home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Tue Sep 13 06:59:47 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.min.lef -i /home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Tue Sep 13 06:59:47 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.max.lef -i /home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/anmol/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Tue Sep 13 06:59:47 UTC 2022 - Executing "openroad -python /openlane/scripts/mergeLib.py --output /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/synthesis/merged.lib --name sky130A_merged /openlane/designs/iiitb_jc/src/sky130_fd_sc_hd__typical.lib"
+
+Tue Sep 13 06:59:47 UTC 2022 - Executing "openroad -python /openlane/scripts/libtrim.py --cell-file /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/synthesis/trimmed.lib /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/synthesis/merged.lib"
+
+Tue Sep 13 06:59:48 UTC 2022 - Executing "openroad -python /openlane/scripts/new_tracks.py -i /home/anmol/OpenLane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/routing/config.tracks"
+
+Tue Sep 13 06:59:48 UTC 2022 - Executing "echo {openlane b6bacc9d1ab469917fda7ceea61ea3a18984b818} > /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/OPENLANE_VERSION"
+
+Tue Sep 13 06:59:50 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -i /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef /openlane/designs/iiitb_jc/src/sky130_vsdinv.lef -o /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef.new"
+
+Tue Sep 13 06:59:50 UTC 2022 - Executing "mv /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef.new /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef"
+
+Tue Sep 13 06:59:55 UTC 2022 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /openlane/designs/iiitb_jc/src/sky130_fd_sc_hd__typical.lib > /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/synthesis/2-sky130_fd_sc_hd__typical.no_pg.lib"
+
+Tue Sep 13 06:59:55 UTC 2022 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/synthesis/trimmed.lib > /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/synthesis/2-trimmed.no_pg.lib"
+
+Tue Sep 13 06:59:55 UTC 2022 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl -l /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/synthesis/2-synthesis.log |& tee /dev/null"
+
+Tue Sep 13 06:59:56 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/results\/synthesis\/iiitb_jc.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 06:59:56 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 06:59:56 UTC 2022 - Executing "sed -i /defparam/d /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/results/synthesis/iiitb_jc.v"
+
+Tue Sep 13 06:59:56 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/synthesis/3-sta.log"
+
+Tue Sep 13 07:00:02 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/floorplan/4-initial_fp.log"
+
+Tue Sep 13 07:00:02 UTC 2022 - Executing "openroad -python /openlane/scripts/odbpy/snap_to_grid.py --output /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/floorplan/4-minimized_pdn.txt --input-lef /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef 4.715 4.42 9.43 8.84"
+
+Tue Sep 13 07:00:03 UTC 2022 - Executing "openroad -python /openlane/scripts/odbpy/defutil.py extract_core_dims --output-data /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/dimensions.txt --input-lef /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/floorplan/4-initial_fp.def"
+
+Tue Sep 13 07:00:03 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/ioplacer.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/floorplan/5-io.log"
+
+Tue Sep 13 07:00:03 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/floorplan/6-tap.log"
+
+Tue Sep 13 07:00:04 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/floorplan/7-pdn.log"
+
+Tue Sep 13 07:00:09 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/placement/8-global.log"
+
+Tue Sep 13 07:00:10 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/placement/9-resizer.log"
+
+Tue Sep 13 07:00:10 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/placement/10-write_verilog.log"
+
+Tue Sep 13 07:00:11 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/results\/placement\/iiitb_jc.resized.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:00:11 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/results\/synthesis\/iiitb_jc.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:00:11 UTC 2022 - Executing "openroad -python /openlane/scripts/odbpy/remove_buffers.py --output /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/placement/9-resizer.buffers_removed.def --input-lef /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef --match {^$} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/placement/9-resizer.def |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/placement/11-remove_buffers.log"
+
+Tue Sep 13 07:00:11 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/placement/12-detailed.log"
+
+Tue Sep 13 07:01:59 UTC 2022 - Executing "openroad -python /openlane/scripts/libtrim.py --cell-file /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/cts/cts.lib.exclude.list --output /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/cts/cts.lib /openlane/designs/iiitb_jc/src/sky130_fd_sc_hd__typical.lib"
+
+Tue Sep 13 07:01:59 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/cts/13-cts.log"
+
+Tue Sep 13 07:02:31 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/cts/14-write_verilog.log"
+
+Tue Sep 13 07:02:32 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/results\/cts\/iiitb_jc.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:02:32 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/results\/placement\/iiitb_jc.resized.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:02:36 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/routing/15-resizer.log"
+
+Tue Sep 13 07:02:37 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/routing/16-write_verilog.log"
+
+Tue Sep 13 07:02:37 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/results\/routing\/iiitb_jc.resized.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:02:37 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/results\/cts\/iiitb_jc.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:02:37 UTC 2022 - Executing "openroad -python /openlane/scripts/odbpy/remove_buffers.py --output /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/routing/15-resizer_timing.buffers_removed.def --input-lef /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/merged.nom.lef --match {^$} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/tmp/routing/15-resizer_timing.def |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/placement/17-remove_buffers.log"
+
+Tue Sep 13 07:02:38 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/routing/18-diode_legalization.log"
+
+Tue Sep 13 07:02:38 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/groute.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/routing/19-global.log"
+
+Tue Sep 13 07:02:39 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/fill.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/routing/20-fill.log"
+
+Tue Sep 13 07:02:39 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/routing/21-write_verilog_global.log"
+
+Tue Sep 13 07:02:39 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/tmp\/routing\/20-global.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:02:39 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/results\/routing\/iiitb_jc.resized.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:02:40 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/droute.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/routing/22-detailed.log"
+
+Tue Sep 13 07:02:57 UTC 2022 - Executing "openroad -python /openlane/scripts/drc_rosetta.py tr to_klayout -o /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/reports/routing/drt.klayout.xml --design-name iiitb_jc /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/reports/routing/drt.drc"
+
+Tue Sep 13 07:02:58 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_verilog.tcl |& tee /dev/null /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/logs/routing/23-write_verilog_detailed.log"
+
+Tue Sep 13 07:02:58 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/tmp\/routing\/22-detailed.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+
+Tue Sep 13 07:02:58 UTC 2022 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/iiitb_jc\/runs\/RUN_2022.09.13_06.59.46\/tmp\/routing\/20-global.v/} /openlane/designs/iiitb_jc/runs/RUN_2022.09.13_06.59.46/config.tcl"
+

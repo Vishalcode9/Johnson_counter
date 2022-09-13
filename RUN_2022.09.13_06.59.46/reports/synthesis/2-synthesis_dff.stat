@@ -1,0 +1,16 @@
+
+16. Printing statistics.
+
+=== iiitb_jc ===
+
+   Number of wires:                  4
+   Number of wire bits:             18
+   Number of public wires:           3
+   Number of public wire bits:      10
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  9
+     $_NOT_                          1
+     sky130_fd_sc_hd__dfrtp_2        8
+
