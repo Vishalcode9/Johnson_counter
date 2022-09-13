@@ -153,7 +153,7 @@ The output waveform of the synthesized netlist are given below:
 </p>
 
 
- ## Docker installation##
+ ## Docker installation ##
  $ sudo apt-get remove docker docker-engine docker.io containerd runc (removes older version of docker if installed)
 
  $ sudo apt-get update
@@ -181,6 +181,95 @@ The output waveform of the synthesized netlist are given below:
  $ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin (paste the version string copies in place of    <VERSION_STRING>)
 
  $ sudo docker run hello-world (If the docker is successfully installed u will get a success message here)
+ 
+ ## Openlane installation ##
+ $ git clone https://github.com/The-OpenROAD-Project/OpenLane.git
+
+ $ cd OpenLane/
+
+ $ make
+
+ $ make test
+ 
+ ## magic installation ##
+ For Magic to be installed and work properly the following softwares have to be installed first:
+
+Installing csh $ sudo apt-get install csh
+
+Installing x11/xorg $ sudo apt-get install x11
+
+$ sudo apt-get install xorg
+
+$ sudo apt-get install xorg openbox
+
+Installing GCC $ sudo apt-get install gcc
+
+Installing build-essential $ sudo apt-get install build-essential
+
+Installing OpenGL $ sudo apt-get install freeglut3-dev
+
+Installing tcl/tk $ sudo apt-get install tcl-dev tk-dev
+
+Installing magic After all the softwares are installed, run the following commands for installing magic
+$ git clone https://github.com/RTimothyEdwards/magic
+
+$ cd magic
+
+$ ./configure
+
+$ make
+
+$ make install
+
+Klayout Installation $ sudo apt-get install klayout
+
+ngspice Installation $ sudo apt-get install ngspice
+
+## PRE SYNTHESIS ##
+-To clone the repository, download the netlist files and simulate the results, Enter the following commands in your terminal:
+
+$ git clone https://github.com/DantuNandiniDevi/iiitb_freqdiv
+
+$ cd iiitb_freqdiv
+
+$ iverilog -o iiitb_freqdiv_out.out iiitb_freqdiv.v iiitb_freqdiv_tb.v
+
+$ ./iiitb_freqdiv_out.out
+
+$ gtkwave iiitb_freqdiv_vcd.vcd
+
+## POST SYNTHESIS ##
+
+$ yosys
+
+yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> read_verilog iiitb_freqdiv.v
+
+yosys> synth -top iiitb_freqdiv
+
+yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> stat
+
+yosys> show
+
+yosys> write_verilog iiitb_freqdiv_netlist.v
+
+$ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd.v iiitb_freqdiv_netlist.v iiitb_freqdiv_tb.v
+
+$ ./a.out
+
+$ gtkwave iiitb_freqdiv_vcd.vcd
+
+** CREATING CUSTOM INVERTER CELL** $ git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+
+$ cd vsdstdcelldesign
+
+$ cp ./libs/sky130A.tech sky130A.tech
+$ magic -T sky130A.tech sky130_inv.mag &
  
     
  ## Contributors ##
