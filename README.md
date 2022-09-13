@@ -286,6 +286,31 @@ To extract Spice netlist, Type the following commands in tcl window.
 % ext2spice
 
 (cthresh 0 rthresh 0 is used to extract parasitic capacitances from the cell.)
+
+<p align="center">
+  <img  src="/images/spice.png">
+</p>
+
+Open the terminal in the directory where ngspice is stored and type the following command, ngspice console will open:
+
+$ ngspice sky130_inv.spice
+<p align="center">
+  <img  src="/images/ngspice.png">
+</p>
+
+Now you can plot the graphs for the designed inverter model.
+
+-> plot y vs time a
+
+<p align="center">
+  <img  src="/images/plot.png">
+</p>
+
+Four timing parameters are used to characterize the inverter standard cell:
+
+Rise time: Time taken for the output to rise from 20% of max value to 80% of max value Rise time = (2.23843 - 2.17935) = 59.08ps Fall time- Time taken for the output to fall from 80% of max value to 20% of max value Fall time = (4.09291 - 4.05004) = 42.87ps Cell rise delay = time(50% output rise) - time(50% input fall) Cell rise delay = (2.20636 - 2.15) = 56.36ps Cell fall delay = time(50% output fall) - time(50% input rise) Cell fall delay = (4.07479 - 4.05) = 24.79ps
+
+
  
     
  ## Contributors ##
