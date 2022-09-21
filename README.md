@@ -344,6 +344,24 @@ Results All the results are in run folder,synthesis,placement,floor,routing repo
 
 ## Reports ##
 
+<p align="center">
+  <img  src="/images/fpca.jpeg">
+</p>
+
+<p align="center">
+  <img  src="/images/fpda.jpeg">
+</p>
+
+<p align="center">
+  <img  src="/images/synprest.jpeg">
+</p>
+
+<p align="center">
+  <img  src="/images/syntharest.jpeg">
+</p>
+
+There is no inverter cell used in the design, so inverter cell is not located.
+
  
     
  ## Contributors ##
