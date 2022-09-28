@@ -143,7 +143,7 @@ GTKWave is a fully featured GTK+ based wave viewer for Unix, Win32, and Mac OSX 
 
 
  <p align="center">
-   <img  src="/images/stat.jpeg">
+   <img  src="/images/psgc.png">
 </p>
 
 
