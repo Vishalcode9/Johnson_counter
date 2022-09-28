@@ -371,7 +371,7 @@ There is no inverter cell used in the design, so inverter cell is not located.
   <img  src="/images/psgc.png">
 </p>
 
-Gate count = 9
+  Gate count = 9
 
 
 
