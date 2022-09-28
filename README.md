@@ -365,7 +365,15 @@ There is no inverter cell used in the design, so inverter cell is not located.
 
 ## Results ##
 
-#Post Layout synthesis gate count#
+## Post Layout synthesis gate count ##
+
+<p align="center">
+  <img  src="/images/psgc.png">
+</p>
+
+Gate count = 9
+
+
 
 
 
