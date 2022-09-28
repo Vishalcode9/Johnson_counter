@@ -407,6 +407,12 @@ OpenSTA> report_checks
   <img  src="/images/gh1.png">
 </p>
 
+```
+This is the performance from reg to reg i.e from flipflop 7 to flipflop 8.
+Performance = 1/(clock period - slack) 
+           = 1/(10.00 - 1.94)ns 
+           = 0.124 Ghz 
+```
 
 ## FlipFlop to Standard cell ratio ##
 
