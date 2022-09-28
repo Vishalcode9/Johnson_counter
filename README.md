@@ -370,10 +370,43 @@ There is no inverter cell used in the design, so inverter cell is not located.
 <p align="center">
   <img  src="/images/psgc.png">
 </p>
-```
-  Gate count = 9
-```
 
+```
+Gate count = 9
+```
+## Area ##
+
+```
+The area of the chip is 1699.317 sq micrometers.
+```
+<p align="center">
+  <img  src="/images/area.png">
+</p>
+
+## FlipFlop to Standard cell ratio ##
+
+<p align="center">
+  <img  src="/images/psgc.png">
+</p>
+
+Flip Flop ratio is
+
+```
+no. of flipflops / total no. of cells = 8/9
+flip flop ratio = 0.88
+```
+## Power ##
+
+<p align="center">
+  <img  src="/images/power.png">
+</p>
+
+```
+Internal Power = 0.467 uW (64.4%) 
+Switching Power = 0.258 uW (35.6%)
+Leakage Power = 0.191 nW (0.0%)
+Total Power = 0.725 uW (100%)
+```
 
 
 
