@@ -362,6 +362,13 @@ Results All the results are in run folder,synthesis,placement,floor,routing repo
 
 There is no inverter cell used in the design, so inverter cell is not located.
 
+
+## Results ##
+
+#Post Layout synthesis gate count#
+
+
+
  
     
  ## Contributors ##
