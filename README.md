@@ -383,6 +383,27 @@ The area of the chip is 1699.317 sq micrometers.
   <img  src="/images/area.png">
 </p>
 
+## Performance ##
+
+```
+OpenSTA> read_liberty -min /home/ubuntu/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v56.lib
+
+OpenSTA> read_liberty -max /home/ubuntu/Desktop/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v56.lib
+
+OpenSTA> read_verilog /home/ubuntu/Desktop/OpenLane/designs/iiitb_jc/runs/RUN_2022.09.28_04.24.17/results/cts/iiitb_jc.v
+
+OpenSTA> link_design iiitb_jc
+
+OpenSTA> read_sdc /home/ubuntu/Desktop/OpenLane/designs/iiitb_jc/runs/RUN_2022.09.28_04.24.17/results/cts/iiitb_jc.sdc
+
+OpenSTA> set_propagated_clock [all_clocks]
+
+OpenSTA> report_checks
+
+
+%	report_checks -from _2_ -to _3_
+```
+
 ## FlipFlop to Standard cell ratio ##
 
 <p align="center">
